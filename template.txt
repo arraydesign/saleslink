@@ -1,0 +1,27 @@
+[% IF user.website != '' %][% user.website %][% ELSE %]www.[% END %]
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[% IF user.headline %][% user.headline %][% END %]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[% IF salutation %][% salutation %][% END %]
+[% IF user.opening %][% user.opening %][% END %]
+[% IF user.closing %][% user.closing %][% END %]
+
+[% FOREACH category IN categories %]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[% category.name %]
+[% FOREACH topic IN category.topics %]
+[% topic.name %]
+[% topic.content %]
+[% END %][% END %]
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[% IF user.first_name != '' %][% user.first_name %] [% END %][% IF user.last_name != '' %][% user.last_name %][% END %][% IF user.designation != '' %], [% user.designation %][% END %] [% IF user.title != '' %][% user.title %][% END %][% IF user.company != '' %], [% user.company %][% END %]
+
+[% IF user.phone_mobile != '' %]C: [% user.phone_mobile %][% END %]
+[% IF user.phone_office != '' %]O: [% user.phone_office %][% END %]
+[% IF user.email != '' %][% user.email %][% END %]
+
+(c) 2012[% IF user.company != '' %]. [% user.company %][% END %]
