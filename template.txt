@@ -32,4 +32,4 @@
 [% IF user.email != '' %][% user.email %][% END %]
 [% IF user.website != '' %][% user.website %][% ELSE %]www.[% END %]
 
-(c) 2012 [% IF user.company != '' %][% user.company %][% ELSE %]Company[% END %]
+(c) [% datetime.year %] [% IF user.company != '' %][% user.company %][% ELSE %]Company[% END %]
